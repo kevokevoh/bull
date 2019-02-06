@@ -2,18 +2,23 @@
   "name": "scheduler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "bull": "^3.6.0",
-    "esm": "^3.2.1"
-  },
-  "devDependencies": {},
+  "main": "cluster.js",
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-      "producer": "node -r esm producer.js",
-      "worker": "node -r esm worker.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevokevoh/bull.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevokevoh/bull/issues"
+  },
+  "homepage": "https://github.com/kevokevoh/bull#readme",
+  "dependencies": {
+    "bull": "^3.6.0",
+    "esm": "^3.2.1"
+  }
 }

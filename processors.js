@@ -1,3 +1,5 @@
+import cluster  from 'cluster';
+
 import { queueKeys } from './keys';
 
 const firstqueueName = Object.keys(queueKeys)[0];
@@ -11,6 +13,7 @@ export const processorInitialisers = {
             job.progress(progress);
         };
         const result = 'Done to the fullest';
+        console.log(`Worker ${cluster.worker.id} is processing me.`);
         done(null, result);
     }
 };

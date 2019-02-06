@@ -1,6 +1,6 @@
 import Queue from 'bull';
 
-import { queueKeys } from './keys';
+import { queueKeys, REDIS_URL } from './keys';
 
 const queueNames = Object.keys(queueKeys);
 
@@ -9,6 +9,7 @@ try {
     queueNames.forEach(function(queue) {
         queues[queue] = new Queue(
             queue
+            // REDIS_URL
         );
     });
 } catch(e) {

@@ -17,8 +17,7 @@ try {
         {
             foo: 'bar',
             bazenga: 'freeee'
-        },
-        { delay: 5000 });
+        });
 } catch (e) {
     console.error(e);
 }
